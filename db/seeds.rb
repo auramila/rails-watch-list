@@ -17,6 +17,7 @@ require "json"
 require "open-uri"
 
 Movie.destroy_all
+List.destroy_all
 
 url = "https://tmdb.lewagon.com/movie/top_rated"
 response = URI.open(url).read
@@ -30,3 +31,7 @@ movies.each do |movie|
     rating: movie["vote_average"]
   )
 end
+
+List.create!(name: 'test')
+List.create!(name: 'test2')
+List.create!(name: 'test3')
