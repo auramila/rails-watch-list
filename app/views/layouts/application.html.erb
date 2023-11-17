@@ -11,6 +11,14 @@
   </head>
 
   <body>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container">
+      <%= link_to lists_path, class: "navbar-brand" do %>
+          <%= image_tag "popcorn2.png", alt: "Logo", width: 50 %>
+        </a>
+        <% end %>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
